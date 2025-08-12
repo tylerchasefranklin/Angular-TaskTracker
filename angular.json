@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-crash": {
+    "Angular-TaskTracker": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-crash",
+            "outputPath": "dist/Angular-TaskTracker",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -58,12 +58,15 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "buildTarget": "Angular-TaskTracker:build"
+          },
           "configurations": {
             "production": {
-              "browserTarget": "angular-crash:build:production"
+              "buildTarget": "Angular-TaskTracker:build:production"
             },
             "development": {
-              "browserTarget": "angular-crash:build:development"
+              "buildTarget": "Angular-TaskTracker:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +74,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-crash:build"
+            "buildTarget": "Angular-TaskTracker:build"
           }
         },
         "test": {
