@@ -1,21 +1,33 @@
 {
   "tasks": [
     {
-      "id": 1,
+      "id": "1",
       "text": "Doctors Appointment",
       "day": "May 5th at 2:30pm",
       "reminder": true
     },
     {
-      "id": 2,
+      "id": "2",
       "text": "Meeting at School",
       "day": "May 6th at 2:30pm",
       "reminder": true
     },
     {
-      "id": 3,
-      "text": "Food Shopping",
-      "day": "May 7th at 12:30pm",
+      "id": "03b2",
+      "text": "Feed Gus",
+      "day": "Everyday at 7 PM",
+      "reminder": true
+    },
+    {
+      "id": "2388",
+      "text": "Feed Gus",
+      "day": "every morning at 8 am",
+      "reminder": true
+    },
+    {
+      "id": "a791",
+      "text": "take the trash out",
+      "day": "Everyday at 7 PM",
       "reminder": false
     }
   ]

@@ -1,5 +1,5 @@
-<div class="container">
-  <app-header></app-header>
-  <router-outlet></router-outlet>
-  <app-footer></app-footer>
-</div>
+<app-header></app-header>
+@if (showAddTask) {
+  <app-add-task></app-add-task>
+}
+<app-tasks></app-tasks>
