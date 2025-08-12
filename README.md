@@ -1,7 +1,7 @@
 # Angular TaskTracker
 
 A responsive and dynamic task tracking web application built with Angular.  
-This project demonstrates core Angular concepts such as components, services, routing, event binding, and HTTP requests, while also integrating with a mock backend using json-server.
+This project demonstrates core Angular concepts such as components, services, routing, event binding, and HTTP requests, while integrating with both a mock backend (json-server) for local development and a live backend API deployed on Render.
 
 [Live Demo](https://tylerchasefranklin.github.io/Angular-TaskTracker/)
 
@@ -12,14 +12,15 @@ This project demonstrates core Angular concepts such as components, services, ro
 - View, add, and delete tasks
 - Toggle task reminders
 - Responsive UI for desktop and mobile
-- Mock backend using json-server
+- Mock backend using json-server for local development
+- Live backend via Render for production
 - Angular best practices: components, services, routing, event binding, HTTP requests
 
 ---
 
 ## Screenshots
 
-<!-- Add screenshots here -->
+<!-- Add screenshots here as the project evolves! -->
 <!-- ![Task List Screenshot](screenshots/task-list.png) -->
 <!-- ![Add Task Screenshot](screenshots/add-task.png) -->
 
@@ -40,17 +41,30 @@ cd Angular-TaskTracker
 npm install
 ```
 
-### Run the Mock Backend
+### Backend Setup
 
-This project uses [json-server](https://github.com/typicode/json-server) to mock a REST API backend.
+#### **Deployed App**
 
-```bash
-npm run server
-```
+- The deployed version of this app uses a live REST API hosted on Render:  
+  [https://angular-tasktracker-api.onrender.com/tasks](https://angular-tasktracker-api.onrender.com/tasks)
 
-By default, the mock backend runs at [http://localhost:5000](http://localhost:5000).
+#### **Local Development**
 
-### Run the App
+- For local development, use the included `json-server` mock backend:
+  ```bash
+  npm run server
+  ```
+  By default, this runs at [http://localhost:5000/tasks](http://localhost:5000/tasks).
+
+- To switch between local and deployed backends, update the `apiUrl` in `src/app/services/task.service.ts` as needed:
+  ```typescript
+  // For local development:
+  private apiUrl = 'http://localhost:5000/tasks';
+  // For production (default):
+  private apiUrl = 'https://angular-tasktracker-api.onrender.com/tasks';
+  ```
+
+### Run the App Locally
 
 ```bash
 ng serve
@@ -64,8 +78,8 @@ Then open [http://localhost:4200/](http://localhost:4200/) in your browser.
 
 - `ng serve` — Runs the Angular app locally
 - `npm run server` — Starts the mock backend (json-server)
-- `ng build` — Builds the app for production
-- `ng deploy` — Deploys to GitHub Pages
+- `ng build --base-href /Angular-TaskTracker/` — Builds the app for production with correct GitHub Pages base path
+- `npx angular-cli-ghpages --dir=dist/Angular-TaskTracker` — Deploys to GitHub Pages
 
 ---
 
