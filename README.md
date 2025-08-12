@@ -1,27 +1,119 @@
-# AngularCrash
+# Angular TaskTracker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+A responsive and dynamic task tracking web application built with Angular.  
+This project demonstrates core Angular concepts such as components, services, routing, event binding, and HTTP requests, while also integrating with a mock backend using json-server.
 
-## Development server
+[Live Demo](https://tylerchasefranklin.github.io/Angular-TaskTracker/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- View, add, and delete tasks
+- Toggle task reminders
+- Responsive UI for desktop and mobile
+- Mock backend using json-server
+- Angular best practices: components, services, routing, event binding, HTTP requests
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Screenshots
 
-## Running unit tests
+<!-- Add screenshots here -->
+<!-- ![Task List Screenshot](screenshots/task-list.png) -->
+<!-- ![Add Task Screenshot](screenshots/add-task.png) -->
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
+## Getting Started
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Prerequisites
 
-## Further help
+- Node.js & npm
+- Angular CLI
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Installation
+
+```bash
+git clone https://github.com/tylerchasefranklin/Angular-TaskTracker.git
+cd Angular-TaskTracker
+npm install
+```
+
+### Run the Mock Backend
+
+This project uses [json-server](https://github.com/typicode/json-server) to mock a REST API backend.
+
+```bash
+npm run server
+```
+
+By default, the mock backend runs at [http://localhost:5000](http://localhost:5000).
+
+### Run the App
+
+```bash
+ng serve
+```
+
+Then open [http://localhost:4200/](http://localhost:4200/) in your browser.
+
+---
+
+## Available Scripts
+
+- `ng serve` — Runs the Angular app locally
+- `npm run server` — Starts the mock backend (json-server)
+- `ng build` — Builds the app for production
+- `ng deploy` — Deploys to GitHub Pages
+
+---
+
+## Technologies Used
+
+- Angular
+- TypeScript
+- json-server
+- RxJS
+- Angular CLI
+
+---
+
+## Project Structure
+
+```
+src/
+  app/
+    components/
+    services/
+    models/
+    ...
+  assets/
+  environments/
+db.json
+...
+```
+
+---
+
+## Future Improvements
+
+- Edit/update tasks
+- Task filtering and sorting (by status, priority, date)
+- User authentication
+- Drag-and-drop for task ordering
+- Persistent backend (Node.js/Express + MongoDB or Firebase)
+- Unit & E2E testing
+- Improved accessibility and UI/UX
+
+---
+
+## License
+
+MIT License
+
+---
+
+## Author
+
+[Tyler Chase Franklin](https://github.com/tylerchasefranklin)
